@@ -1,0 +1,12 @@
+{
+  "name": "cc1-tests",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Test suite for cc1 project",
+  "scripts": {
+    "test": "node --test test01.test.js"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
+}
