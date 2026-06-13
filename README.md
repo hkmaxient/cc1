@@ -1,16 +1,18 @@
 # cc1-tests
 
-A test suite exploring [Chalk](https://github.com/chalk/chalk) — a Node.js library for styling terminal output with colors and text formatting.
+A learning project exploring [Chalk](https://github.com/chalk/chalk) — a Node.js library for styling terminal output with colors and text formatting.
 
-## What's Here
+## Project Structure
 
-- `test01.js` — demo script showing Chalk's color/style API in action
-- `test01.test.js` — test suite covering colors, style chaining, nesting, and special cases
-- `index.html` — static profile card page (Maxient Inc)
+```
+cc1-tests/
+├── test01.js          # Demo script: colors, chaining, nesting
+├── test01.test.js     # Test suite (Node built-in test runner)
+├── index.html         # Static profile card (Maxient Inc)
+└── package.json
+```
 
 ## Getting Started
-
-Install dependencies:
 
 ```bash
 npm install
@@ -26,13 +28,9 @@ Run the tests:
 
 ```bash
 npm test
-# or
-node --test test01.test.js
 ```
 
-## What You'll Learn
-
-This project covers core Chalk concepts:
+## What's Covered
 
 - **Basic colors** — `chalk.blue()`, `chalk.red()`, `chalk.green()`
 - **Style chaining** — `chalk.bold.red()`, `chalk.bgGreen.black()`
@@ -42,18 +40,19 @@ This project covers core Chalk concepts:
 
 ## Key Concept
 
-Chalk methods return strings with embedded ANSI escape codes — the terminal interprets these codes as colors and styles. The actual text content is always preserved inside the styled string.
+Chalk wraps strings in ANSI escape codes — the terminal renders them as colors and styles while preserving the underlying text.
 
 ```js
 import chalk from 'chalk';
 
-chalk.blue('Hello world!')           // blue text
-chalk.bold.red('Error!')             // bold + red
-chalk.bgGreen.black(' Success! ')   // black text on green background
+chalk.blue('Hello world!')
+chalk.bold.red('Error!')
+chalk.bgGreen.black(' Success! ')
+chalk.green('Green ' + chalk.blue.underline('blue underlined') + ' green again')
 ```
 
 ## Dependencies
 
-| Package | Purpose |
-|---------|---------|
-| `chalk` | Terminal string styling |
+| Package | Version | Purpose |
+|---------|---------|---------|
+| `chalk` | `^5.3.0` | Terminal string styling |
