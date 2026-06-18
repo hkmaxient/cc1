@@ -1,13 +1,14 @@
 # cc1-tests
 
-A learning project exploring [Chalk](https://github.com/chalk/chalk) — a Node.js library for styling terminal output with colors and text formatting.
+A learning project exploring [Chalk](https://github.com/chalk/chalk) — a Node.js library for styling terminal output with colors and text formatting. Written in TypeScript.
 
 ## Project Structure
 
 ```
 cc1-tests/
-├── test01.js          # Demo script: colors, chaining, nesting
-├── test01.test.js     # Test suite (Node built-in test runner)
+├── test01.ts          # Demo script: colors, chaining, nesting
+├── test01.test.ts     # Test suite (Node built-in test runner)
+├── tsconfig.json      # TypeScript config (NodeNext ESM, strict mode)
 ├── index.html         # Static profile card (Maxient Inc)
 └── package.json
 ```
@@ -21,7 +22,7 @@ npm install
 Run the demo:
 
 ```bash
-node test01.js
+npx tsx test01.ts
 ```
 
 Run the tests:
@@ -37,18 +38,24 @@ npm test
 - **Nesting** — embedding styled strings inside other styled strings
 - **Advanced colors** — `chalk.hex('#FF0000')`, `chalk.rgb(255, 136, 0)`
 - **Text decorations** — `underline`, `strikethrough`, `inverse`
+- **TypeScript types** — explicit parameter and return type annotations
 
 ## Key Concept
 
 Chalk wraps strings in ANSI escape codes — the terminal renders them as colors and styles while preserving the underlying text.
 
-```js
+```ts
 import chalk from 'chalk';
 
 chalk.blue('Hello world!')
 chalk.bold.red('Error!')
 chalk.bgGreen.black(' Success! ')
 chalk.green('Green ' + chalk.blue.underline('blue underlined') + ' green again')
+
+// TypeScript enforces types on your own functions too
+function label(color: string, message: string): string {
+  return `[${color.toUpperCase()}] ${message}`;
+}
 ```
 
 ## Dependencies
@@ -56,3 +63,5 @@ chalk.green('Green ' + chalk.blue.underline('blue underlined') + ' green again')
 | Package | Version | Purpose |
 |---------|---------|---------|
 | `chalk` | `^5.3.0` | Terminal string styling |
+| `typescript` | `^6.0.3` | Type checking |
+| `tsx` | `^4.22.4` | Run `.ts` files directly without a compile step |
