@@ -1,10 +1,10 @@
 # Learning-First Configuration
 
 ## About Me
-- I'm learning: [React hooks, TypeScript, system design, etc.]
-- My level: [beginner/intermediate/advanced] on these topics
-- I learn best when: [examples shown first / concepts explained first / hands-on practice]
-- My goal: [Build portfolio projects / Prepare for interviews / Career transition]
+- I'm learning: TypeScript
+- My level: beginner
+- I learn best when: examples shown first
+- My goal: Build portfolio projects
 
 ## Response Style
 
@@ -44,18 +44,15 @@ After generating code, occasionally ask:
 If I can't answer, help me understand before moving on.
 
 ## Topics I'm Focusing On
-- [Topic 1]: Want thorough explanations
-- [Topic 2]: Want thorough explanations
-- [Topic 3]: Know basics, want advanced patterns
+- TypeScript: Want thorough explanations
 
 ## Topics I Know Well
-- [Topic A]: Be concise, I know this
-- [Topic B]: Be concise, I know this
+- JavaScript / Node.js: Be concise, I know the basics
 
 ## My Constraints
-- Time available: [15 min / 1 hour / open-ended]
-- Can I break things? [yes - learning environment / no - production]
-- Deadline pressure: [none / some / high]
+- Time available: 15–30 min
+- Can I break things? yes - learning environment
+- Deadline pressure: none
 
 ## Special Modes
 
